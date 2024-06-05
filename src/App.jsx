@@ -1,12 +1,30 @@
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MainHeading from "./components/MainHeading";
+import NewMatch from "./pages/NewMatch";
+import WelcomePage from "./pages/WelcomePage";
+import ScoreBoard from "./pages/ScoreBoard";
+import "./App.css"
 
 function App() {
   return (
-    <main className="flex justify-center gap-4 flex-col min-h-screen">
-      <h1 className="text-3xl text-center font-bold underline">React & Tailwind CSS Starter Pack</h1>
-      <p className="text-center text-xl">This is a starter pack for React & Tailwind CSS projects.</p>
-      <img src="https://bit.ly/3wsmzTy" alt="meme" className="mx-auto" />
+    
+    <main className="w-screen h-screen custom-scrollbar" >
+        <Routes>
+          {/* MainHeading is the parent route component */}
+          <Route path="/" element={<MainHeading />}>
+            {/* Child routes are rendered using Outlet */}
+            <Route index path="/" element={<WelcomePage></WelcomePage>}></Route>
+            <Route path="/newMatch" element={<NewMatch />} />
+            <Route path="/scoreBoard" element={<ScoreBoard />} />
+
+            <Route path="*" element={<div>Page Not Found</div>} />
+          </Route>
+        </Routes>
+
     </main>
+    
+    
+    
   );
 }
 

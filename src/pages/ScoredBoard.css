@@ -1,0 +1,30 @@
+.tablex {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1px;
+}
+.thx {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  padding: 8px;
+}
+
+.tablex > div {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+.tablex > input {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+.extraSmall {
+  @media screen and (max-width: 639px) and (min-width: 301px) {
+    font-size: 1.5rem; /* Adjust the font size as needed */
+  }
+}
+.extraSmallPadding {
+  @media screen and (max-width: 639px) and (min-width: 301px) {
+    padding-top: 1px; /* Adjust the font size as needed */
+    padding-bottom: 1px;
+  }
+}

@@ -1,0 +1,28 @@
+.text-gradient {
+    background: linear-gradient(90deg, rgba(255,165,0,1) 0%, rgba(0,128,0,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  }
+
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+  @media (max-width: 300px) {
+    .custom {
+      font-size: medium !important;
+    }
+  }
+  /* .custom {
+    font-size: clamp(12px, 2vw, 24px); /* Adjust the values as needed 
+  }
+  */
+  @media (max-width: 270px) {
+    .custom {
+      font-size: small !important;
+    }
+  }
